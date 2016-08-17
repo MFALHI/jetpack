@@ -42,7 +42,7 @@ const restApi = {
 		}
 	} )
 		.then( checkStatus ).then( response => response.json() ),
-	fetchModules: () => fetch( `${ window.Initial_State.WP_API_root }jetpack/v4/modules`, {
+	fetchModules: () => fetch( `${ window.Initial_State.WP_API_root }jetpack/v4/module/all`, {
 		credentials: 'same-origin',
 		headers: {
 			'X-WP-Nonce': window.Initial_State.WP_API_nonce
