@@ -339,7 +339,7 @@ class Jetpack_Sync_Queue {
 			$this->row_iterator += 1;
 		}
 
-		return 'jpsq_' . $this->id . '-' . $timestamp . '-' . getmypid() . '-' . $this->row_iterator;
+		return 'jpsq_' . $this->id . '-' . $timestamp . '-' . random_int( 1, 1000000 ) . '-' . $this->row_iterator;
 	}
 
 	private function fetch_items( $limit = null ) {
